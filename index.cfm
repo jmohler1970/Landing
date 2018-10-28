@@ -290,6 +290,7 @@ variables.myDir = getMyDir();
 
 					<p>James Mohler, that's me!</p>
 					<ul>
+						<li>ColdFusion.Adobe.com: <a href="https://coldfusion.adobe.com/profile/jamesmohler">https://coldfusion.adobe.com/profile/jamesmohler</a></li>
 						<li>GitHub: <a href="https://github.com/jmohler1970">https://github.com/jmohler1970</a></li>
 						<li>Stackoverflow: <a href="https://stackoverflow.com/users/1845869/james-a-mohler">https://stackoverflow.com/users/1845869/james-a-mohler</a></li>
 					</ul>
