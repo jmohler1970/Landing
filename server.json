@@ -6,6 +6,7 @@
     "web":{
         "http":{
             "port":8080
-        }
+        },
+        "welcomeFiles":"default.cfm"
     }
 }

@@ -32,6 +32,7 @@ string function getMyDir () output="false" {
 
 	var arDir = [];
 
+	// show link to parent
 	if (url.path != "/")	{
 		arDir.append ({
 			"name"		: "Parent",
@@ -47,8 +48,7 @@ string function getMyDir () output="false" {
 	}
 
 	for (var myDir in myDirs) {
-
-		stData = {
+		var stData = {
 			"name" 		: myDir.name,
 			"href" 		: myDir.type == "file" ? url.path & myDir.name : "?path=" & url.path & myDir.name & "/",
 			"path"		: myDir.type == "file" ? "" : url.path & myDir.name & "/",
@@ -62,18 +62,19 @@ string function getMyDir () output="false" {
 		};
 
 
-
 		if (myDir.type == "File" && left(myDir.name, 1) == ".")	{
 			stData.type = "Hidden File";
 			stData.iconType = "is-warning";
 			stData.makeLink = "none";
 		}
 
+
 		if (myDir.type == "Dir" && left(myDir.name, 1) == ".")	{
 			stData.type = "Hidden Directory";
 			stData.iconType = "is-warning";
 			stData.makeLink = "none";
 		}
+
 
 		switch (myDir.name) {
 			case "CFIDE" :
@@ -110,11 +111,12 @@ string function getMyDir () output="false" {
 			"js" 		: { type : "JavaScript File",		icon : "js", 								iconPack : "fab", 	makeLink : "none" },
 			"json" 		: { type : "JSON Data File",		icon : "js", 								iconPack : "fab" },
 			"md" 		: { type : "Markdown File",		icon : "markdown", 	iconType : "is-info", 		iconPack : "fab" },
-			"pdf" 		: { type : "Portable Network Graphics", icon : "pdf", 	iconType : "is-danger" },
-			"svg" 		: { type : "SVG Image",			icon : "image", 	iconType : "is-primary" }, 
-			"png" 		: { type : "PNG Image", 			icon : "image", 	iconType : "is-primary" },
+			"pdf" 		: { type : "Portable Network Graphics", icon : "pdf", 	iconType : "is-danger" 	},
+			"pumpkin"		: { type : "Happy Halloween", 	icon : "skull",	iconType : "is-warning" 	}, // pumpkin is not free
+			"svg" 		: { type : "SVG Image",			icon : "image", 	iconType : "is-primary" 	},
+			"png" 		: { type : "PNG Image", 			icon : "image", 	iconType : "is-primary" 	},
 			"txt" 		: { type : "Text File", 			icon : "file-alt" },
-			"xml" 		: { type : "XML Data File", 		icon : "code",		iconType : "is-success" },
+			"xml" 		: { type : "XML Data File", 		icon : "code",		iconType : "is-success" 	},
 			"zip" 		: { type : "ZIP Archive", 		icon : "file-archive" }
 			];
 
@@ -138,8 +140,6 @@ if(url.format == "JSON")	{
 	writeOutput(getMyDir());
 	exit;
 	}
-
-variables.myDir = getMyDir();
 </cfscript>
 
 
@@ -269,7 +269,6 @@ variables.myDir = getMyDir();
 						<li><a href="https://tracker.adobe.com/">Adobe Issue Tracker</a></li>
 						<li><a href="https://coldfusion.adobe.com/">Offical Blog</a></li>
 						<li><a href="https://stackoverflow.com/questions/tagged/coldfusion">Stackoverflow: ColdFusion</a></li>
-						<li><a href="https://lucee.org/">Lucee</a></li>
 					</ul>
 				</div>
 
