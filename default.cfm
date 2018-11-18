@@ -152,7 +152,7 @@ if(url.format == "JSON")	{
 	<title>ColdFusion Landing Page</title>
 
 	<link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
 
 	<script src="https://unpkg.com/vue@2.5.17"></script>
 	<script src="https://unpkg.com/buefy@0.6.7"></script>

@@ -6,7 +6,7 @@ This is a fancy Adobe ColdFusion Landing page. This is also an introduction into
 * Buefy, a VueJS plugin that expands on Bulma
 * Axois, an AJAX library that we will be pluggin into VueJS
 * and FontAwesome which provides lots icons
-
+* And of course, ColdFusion 
 
 
 
@@ -15,23 +15,23 @@ This is a fancy Adobe ColdFusion Landing page. This is also an introduction into
 Lots of different technologies going on here. Let's take a look at the head tag and see what I am bringing in.
 
 
-## VueJS
-<script src="https://unpkg.com/vue@2.5.17"></script>
 
-What is the VueJS framework?
+## Some History first
 
 Let's travel way back in time. I remember the first time I worked with the jQuery library. It was love at first sight. All I had to was bring in the jQuery library (and a few other plugins), and my entire website could have sortable table, searchable pulldown menus, tabs that were AJAX'ed in, fancy datepicker. It make my ColdFusion site shine. And if all that wasn't enough, Twitter Bootstrap 2 came to my attention. I could roll out this functionality fast. This was a good time for me as a ColdFusion developer. The company that I worked for was starting to use a lot of .Net stuff. The .Net developers were struggling to get this to work within Visual Studio. There I was with Macromedia Homesite+ doing some Rapid Application Development. These were good times.
 
 One of the things that intregued me about jQuery was how it was able to use `data-` attributes. These are attributes that are put into HTML tags but don't directly change how the tag works. They are not a part of CSS. You can have as many as you want and jQuery can hook into these and do stuff.
 
-For example on my table sorting pluging, `data-` attributes controlled if a column was sortable. On my searchabl pulldown menu, it controlled its options. This is a powerful idea. jQuery can read them, but it doesn't directly use them. It is up the the plugins decide what to do with them. If only we took this concept one step further.
+For example on my table sorting pluging, `data-` attributes controlled if a column was sortable. On my searchable pulldown menu, it controlled its options. This is a powerful idea. jQuery can read them, but it doesn't directly use them. It is up the the plugins decide what to do with them. If only we took this concept one step further.
 
 This is when I saw the first version of AngularJS. It was just filled custom attributes. In its case `ng-` attributes. This video is on VueJS, not AngularJS. So I am going to be brief. I liked the orginal version of AngularJS, but I didn't love it. When version 2 and above became serverside only technlogy. I stopped paying attention to it. Sorry AngularJS and Angular
+
+## VueJS
+<script src="https://unpkg.com/vue@2.5.17"></script>
 
 So what about VueJS?
 
 VueJS is both Client and Server side. It uses custom attributes, in this case `v-`. If you want to do Single Page Applications, it can do it. If you want to make your existing ColdFusion generated pages smarter it can do it. But most importantly, it has an outline of how thing are done. It has a highly flexible, but structured approach. When I am dealing with VueJS code, I know where certain things have to and what they will do.
-
 
 
 
@@ -57,25 +57,13 @@ Number three: NO. You are doing it wrong!
 jQuery takes dumb web pages and makes them smart. VueJS takes dumb web pages and makes them smart. But they have such different approaches. There is no real middle ground. VueJS just requires a different kind of thinking.
 
 
-### Can you use VueJS with AngularJS (version 1)?
-
-This is the older CDN based version of AngularJS.
-
-Probaby not and even if you could, most likely you are doing both wrong
-
-
-### Can you use VueJS with Angular (version 2 and above)?
-
-This is the newer server side version.
-
-Probaby not and even if you could, most likely you are doing both wrong
 
 
 ### Can you use VueJS with Bootstrap?
 
 Bootstrap, at least until version 4.1.x requires jQuery in order to run. So does VueJS work with Bootstrap. The answer is it can, but you are missing out on a huge opportunity. VueJS can make web development much smarter. I want the Bootstrap `<div>` with classes to become VueJS custom tags with hooks into VueJS.
 
-At the time of this writing, Bootstrap Vue is a project that does just that. Unfortunately they have not had a release in about six month. I look forward to them doing regular releases, and I will gladly do a video on that technology.
+At the time of this writing, Bootstrap Vue is a project that does just that. Unfortunately they have not had a release in about six months. I look forward to them doing regular releases, and I will gladly do a video on that technology.
 
 ### Conclusion
 
